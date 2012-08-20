@@ -11,14 +11,14 @@ recalc ()
 	double F;
 	double Fx;
 	double Fy;
-	
+
 	double distX = 0.0;
 	double distY = 0.0;
 
 	double massMX = 0.0;
 	double massMY = 0.0;
 	double massM = 0.0;
-	int m;
+	unsigned int m;
 	// сборка информации о центре масс
 	for (m = 0; m < objs_count; m++)
 	{
@@ -30,7 +30,7 @@ recalc ()
 	for (m = 0; m < objs_count; m++)
 	{
 		R = 0.0;
-		distX = massMX / massM - syste[m].X; 
+		distX = massMX / massM - syste[m].X;
 		distY = massMY / massM - syste[m].Y;
 		if (distX || distY)
 			R = sqrt (distX * distX + distY * distY);
